@@ -26,4 +26,10 @@ public class menu extends AppCompatActivity {
         red_sensores.putExtra("token", token);
         startActivity(red_sensores);
     }
+    public void agregarDatosSensor(View v){
+        Intent registro_sensor = new Intent(getBaseContext(), registro_sensor.class);
+        registro_sensor.putExtra("token", token);
+        startActivity(registro_sensor);
+
+    }
 }

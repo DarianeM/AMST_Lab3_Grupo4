@@ -33,6 +33,13 @@
             android:text="Control de sensores" />
 
         <Button
+            android:id="@+id/btnSensoresAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="agregarDatosSensor"
+            android:text="Agregar datos al Sensor" />
+
+        <Button
             android:id="@+id/btnPedidos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
