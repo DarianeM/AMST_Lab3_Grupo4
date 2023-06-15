@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro_sensor">
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="715dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtSensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginVertical="50dp"
+            android:text="Nuevos datos del Sensor"
+            android:textSize="40dp"
+            android:gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/temperature" />
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="220dp"
+                android:layout_height="63dp"
+                android:gravity="center_vertical"
+                android:text="Temperatura Actual"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/tempEtAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="6"
+                android:textAlignment="textEnd"
+                android:hint="00"
+                android:textSize="24sp"
+                android:gravity="end"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/tempVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text=" °C"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/humidity"/>
+
+            <TextView
+                android:id="@+id/humedadTx"
+                android:layout_width="220dp"
+                android:layout_height="63dp"
+                android:gravity="center_vertical"
+                android:text="Humedad"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/humedadEtAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="6"
+                android:textAlignment="textEnd"
+                android:hint="00"
+                android:textSize="24sp"
+                android:gravity="end"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/humedadVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text=" %"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/weight" />
+
+            <TextView
+                android:id="@+id/pesotx"
+                android:layout_width="220dp"
+                android:layout_height="63dp"
+                android:gravity="center_vertical"
+                android:text="Peso"
+                android:textSize="24sp"/>
+
+            <EditText
+                android:id="@+id/pesoEtAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="4"
+                android:textAlignment="textEnd"
+                android:hint="00"
+                android:textSize="24sp"
+                android:gravity="end"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:id="@+id/pesoVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text=" g"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btAddSensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="subirDatos"
+            android:text="AGREGAR" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
